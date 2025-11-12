@@ -77,9 +77,9 @@ const assertPluginOptions = (
   };
 };
 
-export const pluginJsonServer = (
+export default function pluginJsonServer (
   userOptions: Partial<PluginOptions> = {}
-): Plugin => {
+): Plugin {
   const opts = assertPluginOptions(userOptions);
 
   const createServer = async (
@@ -163,4 +163,3 @@ export const pluginJsonServer = (
     },
   };
 };
-export default pluginJsonServer;
